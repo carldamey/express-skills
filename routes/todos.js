@@ -1,9 +1,8 @@
-var express = require('express');
-var router = express.Router();
+var express = require("express")
+var router = express.Router()
+var todosCtrl = require("../controllers")
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// All actual Paths begin with /todos
+router.get()
 
-module.exports = router;
+module.exports = router
