@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expresss To-Do</title>
+    <title>Expresss Dev Skills</title>
 </head>
 <body>
     <h1>To-Do</h1>
     <ul>
-        <% todos.forEach(todo => { %>
+        <% skills.forEach(skill => { %>
             <li>
-                <%= todo.todo %>
+                <%= skill.skill %>
                 -
-                <%= todo.done ? "done" : "not done" %>
+                <%= skill.learned ? "learned" : "not yet learned" %>
             </li>
         <% }) %>
     </ul>
