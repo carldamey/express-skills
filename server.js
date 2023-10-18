@@ -7,13 +7,17 @@ var logger = require("morgan")
 var indexRouter = require("./routes/index")
 var skillsRouter = require("./routes/skills")
 
-
-
 var app = express()
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "ejs")
+
+app.use(function (req, res, next) {
+  console.log("hello sei!")
+  res.locals.time = new Date().toLocaleDateString()
+  next()
+})
 
 app.use(logger("dev"))
 app.use(express.json())
