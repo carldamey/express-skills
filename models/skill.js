@@ -8,7 +8,15 @@ const skills = [
 ]
 
 module.exports = {
-  getAll: function () {
-    return skills
-  },
+  getAll,
+  getOne,
+}
+
+function getAll() {
+  return skills
+}
+
+function getOne(id) {
+  id = parseInt(id)
+    return skills.find(skill => skill.id === id)
 }
