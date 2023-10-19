@@ -11,4 +11,7 @@ router.get("/new", skillsCtrl.new)
 // GET /skills/:id
 router.get("/:id", skillsCtrl.show)
 
+// POST /todos
+router.post("/", skillsCtrl.create)
+
 module.exports = router

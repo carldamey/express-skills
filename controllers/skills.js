@@ -3,7 +3,8 @@ const Skill = require("../models/skill")
 module.exports = {
     index,
     show,
-    new: newSkill
+    new: newSkill,
+    create,
 }
 
 function index(req, res) {
@@ -24,4 +25,11 @@ function newSkill(req, res) {
     res.render("skills/new", {
         title: "New Skill"
     })
+}
+
+function create(req, res) {
+    // Models are resoponsible for CRUDing data
+    Skill.create(req.body)
+    // Always do a redirect when data has been changed
+    res.redirect("/skills")
 }
