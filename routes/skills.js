@@ -14,4 +14,7 @@ router.get("/:id", skillsCtrl.show)
 // POST /todos
 router.post("/", skillsCtrl.create)
 
+// DELETE /skills/:id
+router.delete("/", skillsCtrl.delete)
+
 module.exports = router

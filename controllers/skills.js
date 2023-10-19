@@ -5,6 +5,7 @@ module.exports = {
     show,
     new: newSkill,
     create,
+    delete: deleteSkill,
 }
 
 function index(req, res) {
@@ -31,5 +32,10 @@ function create(req, res) {
     // Models are resoponsible for CRUDing data
     Skill.create(req.body)
     // Always do a redirect when data has been changed
+    res.redirect("/skills")
+}
+
+function deleteSkill(req, res) {
+    Skill.delete(req.body)
     res.redirect("/skills")
 }
